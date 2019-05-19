@@ -1,5 +1,5 @@
 # Portfolio ( Angular version 6)
-This portfolio is live on takudzwa.azurewebsites.net
+This portfolio is live on https://takudzwa.azurewebsites.net
 
 The goal of this project is to showcase:
 * Angular knowledge
