@@ -39,7 +39,7 @@ export class RavenErrorHandler implements ErrorHandler {
     MenuModule, VideoModule,
     AboutModule, ExpertinModule, ContactModule, AccomplishmentsModule, EducationConferencesModule, ExperienceModule, ProjectsModule,
     // ScrollToModule.forRoot(),
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    // ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

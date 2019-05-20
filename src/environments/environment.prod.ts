@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    assets: 'https://Tashaa78.com/assets/'
+    assets: 'https://takudzwa.azurewebsites.net/assets/'
 };

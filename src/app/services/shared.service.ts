@@ -1,6 +1,7 @@
-import { Injectable, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { content } from '../data';
+import { of } from 'rxjs';
 
 @Injectable()
 export class SharedService {
@@ -21,8 +22,11 @@ export class SharedService {
         this.menu.emit(this.menuVisible);
     }
 
-    getTexts() {
-        return this.http.get(environment.assets + 'json/data-en.full.json');
+    getContent() {
+        // return this.http.get(environment.assets + 'json/data-en.full.json');
+        // return this.http.get('/content');
+        // Hack for azure
+        return of(content);
     }
 
 
