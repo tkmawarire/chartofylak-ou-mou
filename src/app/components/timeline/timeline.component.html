@@ -3,7 +3,7 @@
         <div class="title h3 link colorBlue">{{ job.title }}</div>
         <div class="subtitle h4">{{ job.subtitle }}</div>
         <div fxHide fxShow.sm fxShow.xs class="title h4 year">{{ job.year }}</div>
-        <div *ngFor="let paragraph of job.intro" class="paragraph">{{ paragraph }}</div>
+        <div *ngFor="let paragraph of job.intro" class="paragraph" [innerHTML]="paragraph"><!--{{ paragraph }}--></div>
     </div>
     <div fxFlexOrder="2" fxFlex="10" class="middle" fxHide.sm fxHide.xs>
         <div class="line top"></div>

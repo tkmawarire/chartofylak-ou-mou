@@ -7,6 +7,7 @@ import {
   transition,
   trigger
 } from '@angular/animations';
+import { MenuService } from './menu.service';
 
 @Component({
   selector: 'component-menu',
@@ -31,7 +32,7 @@ export class MenuComponent implements OnInit {
   public visible = false;
   public atTop = true;
 
-  constructor(public portfolio: SharedService) {}
+  constructor(public portfolio: SharedService, private menu: MenuService) {}
 
   ngOnInit() {
     this.portfolio.menu.subscribe((value: boolean) => {
@@ -60,9 +61,11 @@ export class MenuComponent implements OnInit {
     }
   }
 
-  scrollTo(element: HTMLElement) {
+  scrollTo(destination: any) {
+    this.menu.triggerScrollTo(`#${destination}`);
     this.visible = false;
-
-    element.scrollIntoView({ behavior: 'smooth' });
+    console.log(`#${destination}`);
+    // TODO: Try utilize native js
+    // element.scrollIntoView({ behavior: 'smooth' });
   }
 }

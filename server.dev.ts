@@ -34,8 +34,8 @@ app.use((_req, res, next) => {
 });
 
 
-const PORT = process.env.PORT || 3000;
-const DIST_FOLDER = join(process.cwd());
+const PORT = process.env.PORT || 4000;
+const DIST_FOLDER = join(process.cwd(), 'dist');
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./server/main');
@@ -50,7 +50,7 @@ app.engine(
 );
 
 app.set('view engine', 'html');
-app.set('views', join('browser'));
+app.set('views', join(DIST_FOLDER, 'browser'));
 
 // Example Express Rest API endpoints
 // app.get('/api/**', (req, res) => { });

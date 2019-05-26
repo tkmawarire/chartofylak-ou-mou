@@ -44,7 +44,9 @@ export const content = {
       'I combine my advanced knowledge, experience and skills with technology in order to develop professional and innovative applications.',
       'I follow OAUTH, REST and SOLID software engineering principles. I am also a fan of BDD and Agile methodologies.',
       'By following the best practices, I produce “clean code” which is comprehensive, easy to read, debug and maintain.',
-      'I have a keen eye for great user interfaces and have a unique approach to problem-solving. I enjoy learning about the latest technological advancements.'
+      'An innovator of next-generation solutions, systems and applications giving companies a competitive edge and producing outstanding results for customers.',
+      'I have a keen eye for great user interfaces and have a unique approach to problem-solving. I never stop learning.',
+      'Check out the <a href="https://github.com/Tashaa78/chartofylak-ou-mou" target="_blank">code</a> for this portfolio.'
     ],
     'button': 'Download Resume / CV'
   },
@@ -182,7 +184,7 @@ export const content = {
     'content': [
       {
         'title': '2016 - 2018',
-        'paragraph': 'Developed RWIMS FieldForce V3, a mobile application for a UNICEF funded project (RWIMS) used for field data collection, mapping and management. Designed and developed analytics dashboards giving an overview of the reports and various metrics on WASH data.'
+        'paragraph': 'Developed RWIMS FieldForce V3, a mobile application for a UNICEF funded project (RWIMS) used for field data collection, mapping and management. Designed and developed analytics dashboards giving an overview of the reports and various metrics on WASH data. <a href="https://www.unicef.org/innovation/stories/accelerating-delivery-water-and-sanitation-services-through-real-time-monitoring-zimbabwe" target="_blank">Here</a> is more from UNICEF.'
       },
       {
         'title': '2016',
@@ -202,7 +204,7 @@ export const content = {
         'subtitle': 'Sybrin Systems (Pty) Ltd. (ZW)',
         'year': 'Oct 2018 - PRESENT',
         'intro': [
-          'Implementation & Support Developer at one of Africa\'s leading FinTech gaint \'Sybrin Systems (Pty) Ltd.\''
+          'Implementation & Support Developer at one of Africa\'s leading Banking & Financial Services provider, \'Sybrin Systems (Pty) Ltd.\''
         ],
         'elements': [
           {
@@ -309,7 +311,7 @@ export const content = {
         'year': 'June 2017 - Aug 2017',
         'intro': [
 
-          'I designed & developed AciesCartify, an inhouse system for F.E.D.S to facilatate Service Distrubution. The system is an integration with the TelOne Online Integrated Merchant(TOMI). It also includes a full-fledged inventory and point of sale modules. Key Functionalities Include: <br/>Selling Wi-Fi, ADSL, Fibre & ZESA tokens. <br/> Inventory management. <br/>Sales Management. <br/>Client Management. <br/>Client HelpDesk. <br/> NOTE: Currently migrating this system to Angular 7 and ASP.NET Core'
+          'I designed & developed an inhouse system for F.E.D.S to facilatate Service Distrubution. The system is an integration with the TelOne Online Integrated Merchant(TOMI). It also includes a full-fledged inventory and point of sale modules. Key Functionalities Include:- <br/> ::Selling Wi-Fi, ADSL, Fibre & ZESA tokens<br/> ::Inventory management<br/> :::Sales Management<br/> ::Client Management<br/> ::Client HelpDesk<br/>Currently migrating this system to Angular 7 and ASP.NET Core'
         ],
         'used': [
           'Node JS',
@@ -362,8 +364,8 @@ export const content = {
     'title': 'EDUCATION',
     'content': [
       {
-        'title': 'Bachelor Degree in Surveying & Geomatics',
-        'subtitle': 'Midlands State University, Zimbabwe',
+        'title': 'Bachelor Degree in Surveying & Geomatics Midlands State University (ZW)',
+        'subtitle': 'Studying surveying & geomatics was not by choice, but toward the end, I found a passion (Geographic Information System (GIS) Programming & Software Development). I have to face life with a newly found passion. Passion is the energy that keeps me going, that keeps me filled with meaning, and happiness, and excitement, and anticipation. Graded Upper Second (2.1)',
         'year': '2011 - 2016'
       }
     ]
@@ -372,18 +374,18 @@ export const content = {
     'title': 'CONFERENCES',
     'content': [
       {
+        'title': 'Survey Institute of Zimbabwe (SIZ) Conference & AGM',
         'list': [
-          'SIZ Victoria Falls Conference & AGM',
-          'Smart Cities (Web Based Service Fault Reporting GIS)'
+          'Presented on Web Based Service Fault Reporting GIS designed to increase operational efficiency, share information with the public and improve both the quality of government services and citizen welfare. This was in line with their theme: Smart Cities. The overarching mission of a smart city is to optimize city functions and drive economic growth while improving quality of life for its citizens using smart technology and data analysis.'
         ],
         'year': '2016'
       },
       {
+        'title': 'Water Engineering and Development International Conference (Loughborough University, UK)',
         'list': [
-          'WEDC International Conference',
-          'RWIMS presented at the <a href=\'https://40thwedcinternationalconference.wordpress.com/2017/07/28/zimbabwes-rural-wash-information-management-system-rwims-makes-an-international-mark-at-the-40th-wedc-conference-kudos-to-the-wada-scholarship/\'>40th WEDC Conference</a>'
+          'Presentation on RWIMS under the theme Water, Sanitation and Hygiene (WASH) which is focused on low and middle-income countries. RWIMS was designed & developed with the goal of strengthening the WASH sector monitoring through the use of ICTs. The paper can be found <a href=\'https://wedc-knowledge.lboro.ac.uk/details.html?id=22650\' target="_blank">here</a>. More info on the <a href=\'https://40thwedcinternationalconference.wordpress.com/2017/07/28/zimbabwes-rural-wash-information-management-system-rwims-makes-an-international-mark-at-the-40th-wedc-conference-kudos-to-the-wada-scholarship/\' target="_blank">40th WEDC Conference</a> proceedings'
         ],
-        'year': "2017"
+        'year': '2017'
       }
     ]
   },

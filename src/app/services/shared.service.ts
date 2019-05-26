@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter, Output } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { content } from '../data';
 import { of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class SharedService {

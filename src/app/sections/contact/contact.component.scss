@@ -28,7 +28,8 @@
     width: 100%;
 }
 
-.input {
+mat-form-field{
+    float: right;
     width: 100%;
 }
 
@@ -40,13 +41,6 @@
     margin-top: 24px;
 }
 
-.recaptcha {
-    margin: 32px 8px 8px 8px;
-}
-
-.grecaptcha-badge {
-    margin: 0 auto;
-}
 
 .mat-input-underline {
     background-color: #596167;

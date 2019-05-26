@@ -12,10 +12,13 @@
 </div>
 <div class="conferences" *ngIf="type == 'conference'">
     <div class="h3 title">
-        {{ item.year }}
+     {{ item.title }}
     </div>
-    <div *ngFor="let conference of item.list" class="conference">
-        {{ conference }}
+    <div *ngFor="let conference of item.list" class="conference" [innerHTML]="conference">
+        <!--{{ conference }}-->
+    </div>
+    <div class="year">
+        {{ item.year }}
     </div>
 </div>
 
