@@ -65,7 +65,7 @@ app.get(
 
 app.post('/contact', (req: Request, res: Response) => {
   if (req.body) {
-    SendGrid.setApiKey('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');
+    SendGrid.setApiKey('***********');
     const msg = {
       to: req.body.email,
       from: 'portfolio@takudzwa.online',
