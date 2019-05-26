@@ -1,9 +1,9 @@
 import 'zone.js/dist/zone-node';
-
 import { enableProdMode } from '@angular/core';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
-import mail = require('@sendgrid/mail');
+import * as SendGrid from '@sendgrid/mail';
+// import mail = require('@sendgrid/mail');
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
 import * as express from 'express';
@@ -35,7 +35,7 @@ app.use((_req, res, next) => {
 
 
 const PORT = process.env.PORT || 3000;
-const DIST_FOLDER = join(process.cwd());
+// const DIST_FOLDER = join(process.cwd());
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./server/main');
@@ -58,14 +58,14 @@ app.set('views', join('browser'));
 // Server static files from /browser
 app.get(
   '*.*',
-  express.static(join(DIST_FOLDER, 'browser'), {
+  express.static('browser', {
     maxAge: '1y'
   })
 );
 
 app.post('/contact', (req: Request, res: Response) => {
   if (req.body) {
-    mail.setApiKey('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');
+    SendGrid.setApiKey('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');
     const msg = {
       to: req.body.email,
       from: 'portfolio@takudzwa.online',
@@ -73,7 +73,7 @@ app.post('/contact', (req: Request, res: Response) => {
       text: req.body.message,
       html: `<p>${req.body.message}</p><br/>Regards ${req.body.name}`
     };
-    mail.send(msg).then(data => {
+    SendGrid.send(msg).then(data => {
       return res.status(200).send(data[0].body);
     });
   }
