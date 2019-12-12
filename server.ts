@@ -68,7 +68,7 @@ app.post('/contact', (req: Request, res: Response) => {
     SendGrid.setApiKey('***********');
     const msg = {
       to: req.body.email,
-      from: 'portfolio@takudzwa.online',
+      from: '************',
       subject: `Message from ::: ${req.body.name}`,
       text: req.body.message,
       html: `<p>${req.body.message}</p><br/>Regards ${req.body.name}`
