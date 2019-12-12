@@ -1,7 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/7d4f4d74-526a-4729-aa48-670492e68ee2/resourceGroups/portfolio/providers/Microsoft.Web/sites/takudzwa",
-    "appService.deploySubpath": "dist",
-    "appService.zipIgnorePattern": [
-        ".vscode{,/**}"
-    ]
-}
