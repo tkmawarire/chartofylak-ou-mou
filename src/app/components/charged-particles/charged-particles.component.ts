@@ -3,7 +3,6 @@ import { tsParticles } from "tsparticles";
 import { options } from "./config";
 
 @Component({
-  // tslint:disable-next-line: component-selector
   selector: "charged-particles",
   template: `
     <div [id]="id">
@@ -13,7 +12,7 @@ import { options } from "./config";
   styles: [],
 })
 export class ChargedParticlesComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   @Input() options: any = options;
 
