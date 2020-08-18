@@ -1,31 +1,32 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
-import { SharedService } from '../../services/shared.service';
+import { Component, OnInit, ElementRef } from "@angular/core";
+import { SharedService } from "../../services/shared.service";
 import {
   style,
   state,
   animate,
   transition,
-  trigger
-} from '@angular/animations';
-import { MenuService } from './menu.service';
+  trigger,
+} from "@angular/animations";
+import { MenuService } from "./menu.service";
 
 @Component({
-  selector: 'component-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  // tslint:disable-next-line: component-selector
+  selector: "component-menu",
+  templateUrl: "./menu.component.html",
+  styleUrls: ["./menu.component.scss"],
   animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [
+    trigger("fadeInOut", [
+      transition(":enter", [
         // :enter is alias to 'void => *'
         style({ opacity: 0 }),
-        animate(350, style({ opacity: 1 }))
+        animate(350, style({ opacity: 1 })),
       ]),
-      transition(':leave', [
+      transition(":leave", [
         // :leave is alias to '* => void'
-        animate(350, style({ opacity: 0 }))
-      ])
-    ])
-  ]
+        animate(350, style({ opacity: 0 })),
+      ]),
+    ]),
+  ],
 })
 export class MenuComponent implements OnInit {
   public hovered: any;
@@ -44,7 +45,7 @@ export class MenuComponent implements OnInit {
     this.hovered = link;
   }
   onMouseOut() {
-    this.hovered = '';
+    this.hovered = "";
   }
 
   toggleMenu() {
@@ -61,11 +62,9 @@ export class MenuComponent implements OnInit {
     }
   }
 
-  scrollTo(destination: any) {
-    this.menu.triggerScrollTo(`#${destination}`);
+  scrollTo(destination: string) {
+    this.menu.triggerScrollTo(destination);
     this.visible = false;
-    console.log(`#${destination}`);
-    // TODO: Try utilize native js
-    // element.scrollIntoView({ behavior: 'smooth' });
+    console.log(destination);
   }
 }

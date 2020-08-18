@@ -4,6 +4,8 @@ import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader'
 import { AppModule } from './app.module';
 import {FlexLayoutServerModule} from '@angular/flex-layout/server';
 import { AppComponent } from './app.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   imports: [
@@ -13,7 +15,8 @@ import { AppComponent } from './app.component';
     ServerModule,
     ModuleMapLoaderModule,
     ServerTransferStateModule,
-    FlexLayoutServerModule
+    FlexLayoutServerModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   // Since the bootstrapped component is not inherited from your
   // imported AppModule, it needs to be repeated here.

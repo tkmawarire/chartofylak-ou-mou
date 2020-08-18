@@ -3,8 +3,10 @@
     <div class="h3 title">
         {{ item.title }}
     </div>
-    <div class="subtitle">
+    <!-- <div class="subtitle">
         {{ item.subtitle }}
+    </div> -->
+    <div *ngFor="let education of item.subtitle" class="education" [innerHTML]="education">
     </div>
     <div class="year">
         {{ item.year }}

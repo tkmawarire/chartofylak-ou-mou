@@ -87,8 +87,7 @@
             "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [
-            ],
+            "scripts": [],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
@@ -104,6 +103,7 @@
                 "input": "src",
                 "output": "/"
               },
+              "src/manifest.json",
               "src/manifest.json"
             ]
           }
@@ -123,7 +123,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "src/tsconfig.server.json"
           },
           "configurations": {
@@ -135,6 +135,32 @@
                 }
               ]
             }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "portfolio:build",
+            "serverTarget": "portfolio:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "portfolio:build:production",
+              "serverTarget": "portfolio:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "portfolio:build:production",
+            "serverTarget": "portfolio:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
@@ -164,7 +190,9 @@
       }
     }
   },
-  "cli": {},
+  "cli": {
+    "analytics": "9eec2faf-3997-4088-b383-960eb866ebc1"
+  },
   "schematics": {
     "@schematics/angular:class": {
       "spec": false

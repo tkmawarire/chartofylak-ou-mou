@@ -1,13 +1,12 @@
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { TransferHttpCacheModule } from '@nguniversal/common';
-
-import { environment } from '../environments/environment';
-import { AppComponent } from './app.component';
-import { MenuModule } from './components';
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { TransferHttpCacheModule } from "@nguniversal/common";
+import { environment } from "../environments/environment";
+import { AppComponent } from "./app.component";
+import { MenuModule } from "./components";
 import {
   AboutModule,
   AccomplishmentsModule,
@@ -17,8 +16,8 @@ import {
   ExpertinModule,
   ProjectsModule,
   VideoModule,
-} from './sections';
-import { SharedService } from './services/shared.service';
+} from "./sections";
+import { SharedService } from "./services/shared.service";
 
 // tslint:disable: max-line-length
 @NgModule({
@@ -27,21 +26,26 @@ import { SharedService } from './services/shared.service';
     // ParticlesComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: 'portfolio'}),
-    // TODO: Remove Routing
-    // RouterModule.forRoot([
-    //   { path: '', component: AppComponent, pathMatch: 'full'},
-    //   { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
-    //   { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
-    // ]),
+    BrowserModule.withServerTransition({ appId: "portfolio" }),
+
     TransferHttpCacheModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register("ngsw-worker.js", {
+      enabled: environment.production,
+    }),
     BrowserAnimationsModule,
     // import HttpClientModule after BrowserModule.
     HttpClientModule,
-    MenuModule, VideoModule, AboutModule, ExpertinModule, ContactModule, AccomplishmentsModule, EducationConferencesModule, ExperienceModule, ProjectsModule,
+    MenuModule,
+    VideoModule,
+    AboutModule,
+    ExpertinModule,
+    ContactModule,
+    AccomplishmentsModule,
+    EducationConferencesModule,
+    ExperienceModule,
+    ProjectsModule,
   ],
   providers: [SharedService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

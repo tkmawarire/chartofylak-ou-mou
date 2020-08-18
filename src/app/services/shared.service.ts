@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter, Output } from '@angular/core';
 import { content } from '../data';
-import { of } from 'rxjs';
+import { of, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
@@ -27,6 +27,14 @@ export class SharedService {
         // return this.http.get('/content');
         // Hack for azure
         return of(content);
+    }
+
+    sendMessage(data: {name: string, email: string, message: string}) {
+        return this.http.post<{status: number, data: Object}>('/contact', data, { observe: 'response' });
+    }
+
+    send(data: {name: string, email: string, message: string}) {
+        return this.http.post<{status: number, data: Object}>('/send', data, { observe: 'response' });
     }
 
 

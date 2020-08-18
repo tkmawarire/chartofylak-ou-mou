@@ -1,5 +1,11 @@
 {
   "compileOnSave": false,
+  "include": [
+    "server.ts",
+    "./src/polyfills.ts",
+    "./src/main.server.ts",
+    "./src/main.ts"
+  ],
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -7,13 +13,9 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ]
+    "module": "commonjs",
+    "target": "es2015",
+    "lib": ["es2018", "dom"],
+    "typeRoots": ["node_modules/@types"]
   }
 }

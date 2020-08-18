@@ -1,0 +1,14 @@
+{
+  "email": {
+    "email": "******",
+    "password": "*******",
+    "sendgrid": "*****"
+  },
+  "server": {
+    "host": "ip / host",
+    "user": "username",
+    "port": 22,
+    "pass": "******",
+    "remotePath": "/path"
+  }
+}
